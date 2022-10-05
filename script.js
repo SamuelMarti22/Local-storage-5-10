@@ -4,6 +4,7 @@ formulario.addEventListener('submit', (e)=>{
     e.preventDefault()
     LeerData()
     GuardarInfo()
+    ExtraerInfo()
 })
 
 function LeerData(){
@@ -22,4 +23,9 @@ function GuardarInfo(){
     localStorage.setItem('Gmail',correo)
     localStorage.setItem('Dirección',direccion)
     localStorage.setItem('Ciudad',ciudad)
+}
+
+function ExtraerInfo(){
+    let nom = localStorage.getItem('Nombre')
+    alert('Bienvenido',nom)
 }
